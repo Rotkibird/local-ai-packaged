@@ -130,6 +130,8 @@ services:
       - 6333:6333
     volumes:
       - qdrant_storage:/qdrant/storage
+    environment:
+      - QDRANT__SERVICE__API_KEY=${QDRANT__SERVICE__API_KEY}  # Set API key
 
   ollama-cpu:
     profiles: ["cpu"]

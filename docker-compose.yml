@@ -11,6 +11,7 @@ networks:
 
 x-n8n: &service-n8n
   image: n8nio/n8n:latest
+  pull_policy: always
   networks: ['demo']
   environment:
     - DB_TYPE=postgresdb
